@@ -79,16 +79,3 @@ instead of duplicating it.
 - Fixed number of prompts per day
 - Single-user, local-only, no auth
 
-### Why not real activity detection?
-
-True activity detection (mouse/keyboard hooks, foreground app tracking)
-needs OS-level permissions and different APIs per platform, and is fragile
-to get right. A fixed active window covers most of the value for a fraction
-of the effort — worth revisiting for v2, not the MVP.
-
-## Roadmap ideas (not in MVP)
-
-- Real activity-aware prompting
-- System tray icon / launch on startup
-- Voice-to-text response capture
-- Weekly/monthly retrospective entries
