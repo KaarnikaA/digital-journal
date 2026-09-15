@@ -145,14 +145,6 @@ def save_generated_entry(entry_date, style, generated_text):
         return cur.lastrowid
 
 
-LOG_PATH = Path(__file__).parent / "journal_log.md"
-
-
-def append_to_log(entry_date, final_text):
-    block = f"{entry_date}\n{final_text.strip()}\n\n"
-    with open(LOG_PATH, "a", encoding="utf-8") as f:
-        f.write(block)
-
 
 JOURNAL_DOC_PATH = Path(__file__).parent / "journal_log.md"
 
@@ -193,7 +185,6 @@ def finalize_entry(entry_date, final_text, edited):
             ),
         )
     _append_to_doc(entry_date, final_text)
-    append_to_log(entry_date, final_text)
 
 
 def get_entry(entry_date):
